@@ -1,9 +1,70 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+/*Hoja de estilos de la clase 2
 */
 /* 
     Created on : 24 ene 2023, 19:49:50
     Author     : JONA
 */
 
+#encabezado {
+    position: absolute;
+        top: 0;
+        left: 0;
+        height: 8%;
+        width: 100%;
+        background-color: blue;
+        color: whitesmoke;
+}
+#encabezado h1 {
+   display: inline;
+}
+
+#menu {
+      position: absolute;
+        top: 8%;
+        left: 0;
+        height: 4%;
+        width: 100%;
+       background-color: black;
+       color: whitesmoke;
+}
+#menu a {
+    background-color: red;
+    color: black;
+}
+
+#menu a:hover {
+    background-color: green;
+    color: white;
+}
+
+#barralateral {
+    position: absolute;
+        top: 12%;
+        left: 0;
+        height: 81%;
+        width: 20%;
+        background-color: #00FFA0;
+        padding: 10px;
+}
+
+#contenido {
+    position: absolute;
+        top: 12;
+        left: 20%;
+        height: 81%;
+        width: 80%;
+        background-color: #7901A0;
+        padding: 10px;
+        overflow: auto;
+}
+
+#piepagina {
+    position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4%;
+        width: 100%;
+        background-color:cyan;
+        padding: 10px;
+        overflow: auto;
+}
