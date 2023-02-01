@@ -1,9 +1,5 @@
 /*Hoja de estilos de la clase 2
 */
-/* 
-    Created on : 24 ene 2023, 19:49:50
-    Author     : JONA
-*/
 
 #encabezado {
     position: absolute;
@@ -49,7 +45,7 @@
 
 #contenido {
     position: absolute;
-        top: 12;
+        top: 12%;
         left: 20%;
         height: 81%;
         width: 80%;
