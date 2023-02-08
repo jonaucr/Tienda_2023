@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.Tienda.domain;
 
 import jakarta.persistence.Entity;
@@ -15,14 +12,14 @@ import lombok.Data;
  *
  * @author JONA
  */
-@Data
-@Entity
+@Data  //crea get a set y los modifica de una
+@Entity 
 @Table(name="cliente")
 public class Cliente {
-    private static final long serialVersionUID =1L;
+    private static final long serialVersionUID =1L; //es una propiedad
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCliente; //TRANSFORMA EN ID_CLIENTE
+    private Long idCliente; //TRANSFORMA EN id_cliente  hibernate hace la consulta
     String nombre;
     String apellidos;
     String correo;
