@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <<header
+            th:replace="layout/plantilla :: header"/>
+        </header>
+        <h1>Datos de Cliente</h1>
+        <br/>
+        <a th:href="@{/}">Regresar<a/><!-- comment -->
+            <br/><!-- comment -->
+            <br/><!-- comment -->
+            <form th:object="@ {/guardarCliente}"
+                  method="POST"
+                th:object="${cliente}">
+                <input type="hidden" name id="cliente"><!-- comment -->
+                <label for="nombre">Nombre:</label><br/><!-- comment -->  
+                <input type="text" name="nombre" th:field="*{nombre}" /> <br/>
+                
+                 <label for="apellidos">Apellidos:</label><br/><!-- comment -->  
+                <input type="text" name="apellidos" th:field="*{apellidos}" /> <br/>
+                
+                 <label for="correo">Correo:</label><br/><!-- comment -->  
+                <input type="email" name="correo" th:field="*{correo}" /> <br/>
+                
+                 <label for="telefono">Telefono:</label><br/><!-- comment -->  
+                <input type="tel" name="telefono" th:field="*{telefono}" /> <br/>
+                
+                <input type="submit" name="Guardar" value="Guardar" /><!-- comment -->
+                
+            </form>
+                
+            
+    </body>
+</html>
