@@ -12,14 +12,14 @@ import java.util.List;
  * @author JONA
  */
 public interface ClienteService {
-    public List<Cliente> getClientes(); //devuelve lista
     
-    public Cliente getCliente(Cliente cliente); //devuelve cliente
+    public List<Cliente> getClientes(); 
     
-    public void save (Cliente cliente); // Sirve para insertar como modificar un registro en BD
+    public Cliente getCliente(Cliente cliente); 
     
-    public void delete (Cliente cliente); 
+    public void save(Cliente cliente); // Sirve para insertar como modificar un registro en BD
     
-    
+    public void delete(Cliente cliente); 
+  
 }
 

@@ -22,37 +22,43 @@ public class IndexController {
 
     @Autowired
     ClienteService clienteService;
-    //no hay que poner new cliente a cada metodo
     private Cliente cliente;
+   
 
     @GetMapping("/")
     public String inicio(Model model) {
         log.info("Ahora utilizando MVC");
-      
-       // var clientes = clienteService();//trae los registro de db de la tabla clientes
-       // model.addAttribute("clientes", clientes);
-        
+
+        var clientes = clienteService.getClientes();//trae los registro de db de la tabla clientes
+       model.addAttribute("clientes", clientes);
         return "index";
     }
+
     @GetMapping("/nuevoCliente")
     public String nuevoCliente(Cliente cliente) {
+        
         return "modificarCliente";
     }
 
+ 
     @PostMapping("/guardarCliente")
-    public String guardarCliente(Cliente clitente) {
-          clienteService.save(cliente);
+    public String guardarCliente(Cliente cliente) {
+        clienteService.save(cliente);
+        
         return "redirect:/";
     }
+
     @GetMapping("/modificarCliente/{idCliente}")
     public String modificarCliente(Cliente cliente, Model model) {
         cliente = clienteService.getCliente(cliente);
-        return "modificarcliente";
+        model.addAttribute("Cliente", cliente);
+        return "modificarCliente";
     }
-    @GetMapping ("/eliminarCliente/{idCliente}") 
-    public String eliminarCliente (Cliente cliente) {
-    clienteService.delete(cliente);
-    return "redirect:/";
+
+    @GetMapping("/eliminarCliente/{idCliente}")
+    public String eliminarCliente(Cliente cliente) {
+        clienteService.delete(cliente);
+        return "redirect:/";
     }
 }
 
